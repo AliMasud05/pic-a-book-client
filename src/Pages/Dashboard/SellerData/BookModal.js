@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const BookModal = () => {
+const BookData = () => {
     // const { register, handleSubmit } = useForm();
     // const { productName, address, resalePrice, originalPrice, usesYear, sellerName, registered } = product;
 
@@ -40,4 +40,4 @@ const BookModal = () => {
 };
    
 
-export default BookModal;
+export default BookData;
