@@ -15,6 +15,7 @@ import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 
+
 const router =createBrowserRouter([
     {
       path:'/',
@@ -50,7 +51,7 @@ const router =createBrowserRouter([
     },
     {
       path:'/dashboard',
-      element:<DashBoard></DashBoard>,
+      element: <DashBoard></DashBoard>,
       children:[
         {
           path:'/dashboard/admindashboard',
