@@ -15,12 +15,14 @@ import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import PrivetRoute  from "../../Pages/PrivetRoute/PrivetRoute";
+import  ErrorPage  from "../../ErrorPage/ErrorPage";
 
 
 const router =createBrowserRouter([
     {
       path:'/',
       element:<Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
           path:'/',
@@ -30,6 +32,7 @@ const router =createBrowserRouter([
           path:'/signup',
           element:<SignUp></SignUp>
         },
+        
         {
           path:'/login',
           element:<Login></Login>
@@ -47,6 +50,8 @@ const router =createBrowserRouter([
           path:'/addproducts',
           element:<AdvProduct></AdvProduct>
         }
+       
+        
         
       ]
     },

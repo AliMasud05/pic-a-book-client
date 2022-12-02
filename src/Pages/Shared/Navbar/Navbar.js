@@ -31,12 +31,22 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><Link to='/signup'>SignUp</Link></li>
-                    <li><Link to='/login'>Login</Link> </li>
-                    <li><Link to='/categories'>Item 3</Link></li>
-                    <li><Link to='/dashboard/addProduct'>Item 3</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
-                    <li><Link to='/dashboard'>Dashboard</Link></li>
+                    
+                    
+                    {
+                        user?.uid?
+                        <>
+                                <li><Link to='/categories'>Item 3</Link></li>
+                                <li><Link to='/dashboard/addProduct'>Item 3</Link></li>
+                                <li><Link to='/blog'>Blog</Link></li>
+                                <li><Link to='/dashboard'>Dashboard</Link></li>
+                        </>
+                        :
+                        <>
+                                <li><Link to='/signup'>SignUp</Link></li>
+                                <li><Link to='/login'>Login</Link> </li>
+                        </>
+                    }
 
                 </ul>
             </div>
