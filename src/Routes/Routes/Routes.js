@@ -14,6 +14,7 @@ import MyProduct from "../../Pages/Dashboard/SellerData/MyProduct";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivetRoute  from "../../Pages/PrivetRoute/PrivetRoute";
 
 
 const router =createBrowserRouter([
@@ -51,7 +52,7 @@ const router =createBrowserRouter([
     },
     {
       path:'/dashboard',
-      element: <DashBoard></DashBoard>,
+      element: <PrivetRoute><DashBoard></DashBoard></PrivetRoute>,
       children:[
         {
           path:'/dashboard/admindashboard',
