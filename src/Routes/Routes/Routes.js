@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import AdvProduct from "../../Pages/AdvProduct.js/AddProduct";
 
 import BookItems from "../../Pages/BookItems/BookItems";
 import Categories from "../../Pages/Categories/Categories";
@@ -40,6 +41,10 @@ const router =createBrowserRouter([
           loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`),
           element:<BookItems></BookItems>
         },
+        {
+          path:'/addproducts',
+          element:<AdvProduct></AdvProduct>
+        }
         
       ]
     },
