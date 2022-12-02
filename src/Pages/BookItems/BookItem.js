@@ -37,7 +37,7 @@ const BookItem = ({ product }) => {
             seller
 
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://pic-a-book-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -147,7 +147,7 @@ const BookItem = ({ product }) => {
                     </tbody>
                 </table>
                 <div>
-                    <label htmlFor={_id} className="w-full">
+                    <label htmlFor={_id} className="w-full block text-center py-2 text-slate-900 font-serif font-bold bg-slate-50">
                         Buy now
                     </label>
                 </div>

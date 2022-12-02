@@ -6,13 +6,13 @@ const AllSellers = () => {
     const [tick, setTick] = useState(false);
     const [sellers, setSellers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/sellers')
+        fetch('https://pic-a-book-server.vercel.app/sellers')
             .then(res => res.json())
             .then(data => setSellers(data))
     }, [delt, tick])
     const deleteUser = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/sellers/${id}`, {
+        fetch(`https://pic-a-book-server.vercel.app/sellers/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -27,7 +27,7 @@ const AllSellers = () => {
         const add = {
             tick: tick
         }
-        fetch(`http://localhost:5000/verify/${id}`, {
+        fetch(`https://pic-a-book-server.vercel.app/verify/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

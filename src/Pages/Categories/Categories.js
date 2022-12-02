@@ -6,7 +6,7 @@ const Categories = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/booktitle');
+            const res = await fetch('https://pic-a-book-server.vercel.app/booktitle');
             const data = await res.json();
             return data;
         }

@@ -8,7 +8,7 @@ const MyProduct = () => {
     const [items, setItems]=useState([]);
     const[dlt, setDlt] = useState(true)
   useEffect(()=>{
-      fetch(`http://localhost:5000/myproduct?email=${user?.email}`,{
+      fetch(`https://pic-a-book-server.vercel.app/myproduct?email=${user?.email}`,{
           headers: {
               authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -19,7 +19,7 @@ const MyProduct = () => {
 
     const deleteProduct = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/categories/${id}`,{
+        fetch(`https://pic-a-book-server.vercel.app/categories/${id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())
@@ -33,7 +33,7 @@ const MyProduct = () => {
         const add = {
             advertise: true,
         };
-        fetch(`http://localhost:5000/books/${id}`, {
+        fetch(`https://pic-a-book-server.vercel.app/books/${id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json",

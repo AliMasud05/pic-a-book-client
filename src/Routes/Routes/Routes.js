@@ -17,6 +17,7 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import PrivetRoute  from "../../Pages/PrivetRoute/PrivetRoute";
 import  ErrorPage  from "../../ErrorPage/ErrorPage";
 import Blog from "../../Pages/Blog/Blog";
+import Gallery from "../../Pages/Gallery/Gallery";
 
 
 const router =createBrowserRouter([
@@ -38,6 +39,7 @@ const router =createBrowserRouter([
           path:'/login',
           element:<Login></Login>
         },
+        
         {
           path:'/categories',
           element:<Categories></Categories>
@@ -48,7 +50,7 @@ const router =createBrowserRouter([
         },
         {
           path: '/category/:id',
-          loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`),
+          loader: ({ params }) => fetch(`https://pic-a-book-server.vercel.app/category/${params.id}`),
           element:<BookItems></BookItems>
         },
         {

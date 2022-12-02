@@ -9,7 +9,7 @@ const DashBoard = () => {
    //console.log(user.email);
    
     useEffect(() => {
-        fetch(`http://localhost:5000/user?email=${user?.email}`)
+        fetch(`https://pic-a-book-server.vercel.app/user?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setClient(data))
     }, [user?.email, user])
