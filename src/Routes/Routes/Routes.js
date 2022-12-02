@@ -16,6 +16,7 @@ import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import PrivetRoute  from "../../Pages/PrivetRoute/PrivetRoute";
 import  ErrorPage  from "../../ErrorPage/ErrorPage";
+import Blog from "../../Pages/Blog/Blog";
 
 
 const router =createBrowserRouter([
@@ -40,6 +41,10 @@ const router =createBrowserRouter([
         {
           path:'/categories',
           element:<Categories></Categories>
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         },
         {
           path: '/category/:id',

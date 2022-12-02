@@ -22,7 +22,7 @@ const AdvProduct = () => {
                     ></BookItem>)
                 }
             </div>
-            <Link to='books'><p className='text-center text-xl mt-16 hover:text-sky-600'>See more ...</p></Link>
+            
         </div>
     );
 };
