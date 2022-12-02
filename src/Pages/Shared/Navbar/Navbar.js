@@ -23,6 +23,8 @@ const Navbar = () => {
                         <li><Link to='/categories'>Item 3</Link></li>
                         <li><Link to='/addProduct'>Item 3</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/dashboard'>Dashboard</Link></li>
+
                     </ul>
                 </div>
                 <Link className="btn btn-ghost normal-case text-xl">Pick- <span className='text-xl' >a</span>-Book</Link>
@@ -34,6 +36,7 @@ const Navbar = () => {
                     <li><Link to='/categories'>Item 3</Link></li>
                     <li><Link to='/addProduct'>Item 3</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
+                    <li><Link to='/dashboard'>Dashboard</Link></li>
 
                 </ul>
             </div>
