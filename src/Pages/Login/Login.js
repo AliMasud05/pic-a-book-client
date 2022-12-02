@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
@@ -13,6 +13,23 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             console.log(user);
+            const currentUser = {
+                user: user.email
+            }
+            fetch('http://localhost:5000/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(currentUser)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    localStorage.setItem('token', data.token)
+                   
+                })
+            console.log(user)
         })
         .then(err=>console.log(err))
 

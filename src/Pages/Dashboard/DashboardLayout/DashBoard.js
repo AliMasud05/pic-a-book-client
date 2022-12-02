@@ -42,10 +42,8 @@ const DashBoard = () => {
                         {
                             client[0]?.role === 'buyer' &&
                             <ul className="menu p-4 h-full  bg-gray-100 font-bold ">
-                                <h1 className="text-2xl py-5">Dashboard</h1>
-                                <li><Link to='/'>Profile</Link></li>
-                                <li><Link to=''>All sellers</Link></li>
-                                <li><Link to='/dashboard/myproduct'>My Products </Link></li>
+                               
+                                <li><Link to='/dashboard/myproduct'>My Order </Link></li>
                                 <li><Link to=''>Reported items</Link></li>
                             </ul>
                         }

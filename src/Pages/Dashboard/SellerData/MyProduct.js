@@ -8,7 +8,11 @@ const MyProduct = () => {
     const [items, setItems]=useState([]);
     const[dlt, setDlt] = useState(true)
   useEffect(()=>{
-      fetch(`http://localhost:5000/myproduct?email=${user?.email}`)
+      fetch(`http://localhost:5000/myproduct?email=${user?.email}`,{
+          headers: {
+              authorization: `Bearer ${localStorage.getItem('token')}`
+          }
+      })
       .then(res=>res.json())
       .then(data=>setItems(data))
   },[user?.email,dlt]);
@@ -24,6 +28,23 @@ const MyProduct = () => {
             toast.error('delete complete')
             setDlt(!dlt);
         })
+    };
+    const handleAdd = (id) => {
+        const add = {
+            advertise: true,
+        };
+        fetch(`http://localhost:5000/books/${id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(add),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                
+            });
     };
     
 
@@ -54,7 +75,7 @@ const MyProduct = () => {
                             <td>Category :{item?.category}</td>
                             <td>
                                 <button className='btn border-none bg-red-600 text-white mr-3 ' onClick={() => deleteProduct(item._id)} > Delete</button>
-                                <button className='btn border-none bg-orange-500 text-white' > Advertise</button>
+                                <button className='btn border-none bg-orange-500 text-white' onClick={() => handleAdd(item._id)} > Advertise</button>
                             </td>
                         </tr>)
                     }

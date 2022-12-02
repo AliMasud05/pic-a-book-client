@@ -12,22 +12,22 @@ const AllSellers = () => {
     }, [delt, tick])
     const deleteUser = (id) => {
         console.log(id);
-        // fetch(`https://relic-book-server-soliman-soad.vercel.app/sellers/${id}`, {
-        //     method: 'DELETE'
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         toast.error('Review deleted')
-        //         setDelt(!delt)
-        //     })
+        fetch(`http://localhost:5000/sellers/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.error('Review deleted')
+                setDelt(!delt)
+            })
     }
     const verify = (id) => {
 
         const add = {
             tick: tick
         }
-        fetch(`https://relic-book-server-soliman-soad.vercel.app/verify/${id}`, {
+        fetch(`http://localhost:5000/verify/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

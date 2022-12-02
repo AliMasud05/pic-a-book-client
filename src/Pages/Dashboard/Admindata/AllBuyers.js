@@ -6,7 +6,10 @@ const AllBuyers = () => {
         const [delt, setDelt] = useState(true);
     const [buyers, setBuyers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/buyers')
+        fetch('http://localhost:5000/buyers',{
+            headers: {
+            authorization: `Bearer ${localStorage.getItem('token')}`
+        }})
             .then(res => res.json())
             .then(data => setBuyers(data))
     }, [delt])
