@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
-import { GoogleAuthProvider } from "firebase/auth";
+
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
-    const { signIn, providerLogin }=useContext(AuthContext)
+    const { signIn}=useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
@@ -40,19 +40,7 @@ const Login = () => {
 
     };
 
-    const googleAuthProvider = new GoogleAuthProvider();
-    const handleGoogleLogin = () => {
-        providerLogin(googleAuthProvider)
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-
-            })
-            .catch((e) => {
-                console.error(e);
-            });
-    };
-
+    
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
@@ -85,7 +73,7 @@ const Login = () => {
                 </form>
                 <p>New to Doctors Portal <Link className='text-secondary' to="/signup">Create new Account</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-outline w-full' onClick={handleGoogleLogin}>CONTINUE WITH GOOGLE</button>
+                <button className='btn btn-outline w-full' >CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );
