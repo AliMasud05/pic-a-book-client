@@ -5,6 +5,7 @@ import BookItems from "../../Pages/BookItems/BookItems";
 import Categories from "../../Pages/Categories/Categories";
 import AdminDashBoard from "../../Pages/Dashboard/DashboardLayout/AdminDashBoard";
 import DashBoard from "../../Pages/Dashboard/DashboardLayout/DashBoard";
+import MyProduct from "../../Pages/Dashboard/SellerData/MyProduct";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 
@@ -43,6 +44,10 @@ const router =createBrowserRouter([
         {
           path:'/dashboard/admindashboard',
           element:<AdminDashBoard></AdminDashBoard>
+        },
+        {
+          path:'/dashboard/myproduct',
+          element:<MyProduct></MyProduct>
         }
       ]
     }

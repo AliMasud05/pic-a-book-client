@@ -45,7 +45,7 @@ const DashBoard = () => {
                                 <h1 className="text-2xl py-5">Dashboard</h1>
                                 <li><Link to='/'>Profile</Link></li>
                                 <li><Link to=''>All sellers</Link></li>
-                                <li><Link to=''>My Products </Link></li>
+                                    <li><Link to='/dashboard/myproduct'>My Products </Link></li>
                                 <li><Link to=''>Reported items</Link></li>
                             </ul>
                           }
@@ -55,7 +55,7 @@ const DashBoard = () => {
                                 <h1 className="text-2xl py-5">Dashboard</h1>
                                 <li><Link to='/'>Profile</Link></li>
                                 <li><Link to=''>All sellers</Link></li>
-                                <li><Link to=''>All buyers </Link></li>
+                                    <li><Link to='/dashboard/myproduct'>My Products </Link></li>
                                 <li><Link to=''>Reported items</Link></li>
                             </ul>
                           }
@@ -65,7 +65,7 @@ const DashBoard = () => {
                                 <h1 className="text-2xl py-5">Dashboard</h1>
                                 <li><Link to='/'>Profile</Link></li>
                                 <li><Link to=''>All sellers</Link></li>
-                                <li><Link to=''>All buyers </Link></li>
+                                    <li><Link to='/dashboard/myproduct'>My Products </Link></li>
                                 <li><Link to=''>Reported items</Link></li>
                             </ul>
                           }
