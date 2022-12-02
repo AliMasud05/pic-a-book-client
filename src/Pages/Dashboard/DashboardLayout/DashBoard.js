@@ -21,7 +21,7 @@ const DashBoard = () => {
 
             <div className="drawer drawer-mobile">
                 <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content">
+                <div className="drawer-content ">
                     <div className="navbar bg-base-100">
                         <div className="flex-1 lg:hidden">
                             <h1 className="btn btn-ghost normal-case text-xl">Dashboard</h1>
@@ -35,13 +35,13 @@ const DashBoard = () => {
                     </div>
                     <Outlet></Outlet>
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side ">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 text-base-content">
                     
                         {
                             client[0]?.role === 'buyer' &&
-                            <ul className="menu p-4 w-80  bg-gray-100 font-bold ">
+                            <ul className="menu p-4 h-full  bg-gray-100 font-bold ">
                                 <h1 className="text-2xl py-5">Dashboard</h1>
                                 <li><Link to='/'>Profile</Link></li>
                                 <li><Link to=''>All sellers</Link></li>
@@ -51,22 +51,21 @@ const DashBoard = () => {
                         }
                         {
                             client[0]?.role === 'seller' &&
-                            <ul className="menu p-4 w-80  bg-gray-100 font-bold ">
+                            <ul className="menu p-4 h-full  bg-gray-100 font-bold ">
                                 <h1 className="text-2xl py-5">Dashboard</h1>
                                 <li><Link to='/'>Profile</Link></li>
-                                <li><Link to=''>All sellers</Link></li>
+                                    <li><Link to='dashboard/addProduct'>Add product</Link></li>
                                 <li><Link to='/dashboard/myproduct'>My Products </Link></li>
                                 <li><Link to=''>Reported items</Link></li>
                             </ul>
                         }
                         {
                             client[0]?.role === 'admin' &&
-                            <ul className="menu p-4 w-80  bg-gray-100 font-bold ">
-                                <h1 className="text-2xl py-5">Dashboard</h1>
-                                <li><Link to='/'>Profile</Link></li>
-                                <li><Link to=''>All sellers</Link></li>
-                                <li><Link to='/dashboard/myproduct'>My Products </Link></li>
-                                <li><Link to=''>Reported items</Link></li>
+                            <ul className="menu p-4 h-full scroll-0  bg-gray-100 font-bold ">
+                                
+                                
+                                    <li><Link to='/dashboard/seller'>All Seller</Link></li>
+                                    <li><Link to='/dashboard/buyer'>All Buyer</Link></li>
                             </ul>
                         }
 

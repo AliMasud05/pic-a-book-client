@@ -8,7 +8,7 @@ const Navbar = () => {
         logOut()
         .then(()=>{})
         .then(err=>console.log(err))
-    }
+    };
 
     return (
         <div className="navbar bg-base-100">
@@ -27,14 +27,14 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl">Pick- <span className='text-xl' >a</span>-Book</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">Pick- <span className='text-xl' >a</span>-Book</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/signup'>SignUp</Link></li>
                     <li><Link to='/login'>Login</Link> </li>
                     <li><Link to='/categories'>Item 3</Link></li>
-                    <li><Link to='/addProduct'>Item 3</Link></li>
+                    <li><Link to='/dashboard/addProduct'>Item 3</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
                     <li><Link to='/dashboard'>Dashboard</Link></li>
 

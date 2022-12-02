@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { AuthContext } from '../../Context/AuthProvider';
+import { AuthContext } from '../../../Context/AuthProvider';
+
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();

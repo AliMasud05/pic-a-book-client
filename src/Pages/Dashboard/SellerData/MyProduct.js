@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
-import MyProductCard from './MyProductCard';
+
 
 const MyProduct = () => {
     const {user}=useContext(AuthContext);

@@ -14,7 +14,7 @@ const Categories = () => {
     //console.log(users);
 
     return (
-        <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center my-3'>
             {
                 users.map(user => <Category 
                 key={user._id}
